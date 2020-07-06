@@ -7,7 +7,8 @@ const Header = () => {
         <div className='header-area'>
             <nav>
                     <img className='logotop' src={logo} alt="logoTop"/>
-                    <button className='btn btn-danger'>Login</button>
+                    <button>Login</button>
+                    <button>Sign Up</button>
             </nav>
             <div className='slogan'>
                 <h1>Best food waiting for your belly</h1>
