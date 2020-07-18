@@ -1,17 +1,19 @@
 import React from 'react';
 import './App.css';
 import Header from './Components/Header/Header';
-import { FoodList } from './FoodContext/FoodContext';
+import { FoodList } from './Components/FoodContext/FoodContext';
 import Catagories from './Components/Catagories/Catagories';
+import About from './Components/About/About';
 
 function App() {
   return (
-    <FoodList>
-      <div className="App">
-        <Header></Header>
+    <div>
+      <FoodList>
+      <Header></Header>
       <Catagories></Catagories>
-      </div>
+      <About></About>
     </FoodList>
+    </div>
     )
   
 }

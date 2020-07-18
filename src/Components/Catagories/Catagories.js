@@ -1,21 +1,31 @@
 import React from "react";
 import "./Catagories.css";
-import Food from "./Food/Food";
+import Food from "../Food/Food";
 import { useContext } from "react";
-import { FoodContext, FoodList } from "../../FoodContext/FoodContext";
+import { FoodContext } from "../FoodContext/FoodContext";
 
 const Catagories = () => {
-  const [foods,setFood] = useContext(FoodContext);
+  const [foods, setFood] = useContext(FoodContext);
+  console.log(Object.values(foods));
   return (
     <div>
-      <nav>
-        <h4>Breakfast</h4>
-        <h4>Lunch</h4>
-        <h4>Dinner</h4>
-      </nav>
-      {
-          foods.map(food => <Food img={food.img} name={food.name} slogan={food.slogan} price={food.price}></Food>)
-      }
+      <div>
+        <nav>
+          <button>Breakfast</button>
+          <button>Lunch</button>
+          <button>Dinner</button>
+        </nav>
+      </div>
+      <div className="foodArea">
+        {foods.map((food) => (
+          <Food
+            image={food.image}
+            name={food.name}
+            slogan={food.slogan}
+            price={food.price}
+          ></Food>
+        ))}
+      </div>
     </div>
   );
 };
